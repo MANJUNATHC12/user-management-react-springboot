@@ -1,0 +1,201 @@
+/* Google font feel */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #1e3c72, #2a5298);
+  min-height: 100vh;
+  padding: 40px;
+  color: #333;
+}
+
+/* FORM CARD */
+form {
+  background: linear-gradient(135deg, #ffffff, #f4f7ff);
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* Labels */
+form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Inputs */
+form input {
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #cfd6ff;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.25);
+}
+
+
+
+
+/* Submit button */
+form button {
+  margin-top: 18px;
+  width: 200px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 12px 25px rgba(118, 75, 162, 0.45);
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(118, 75, 162, 0.6);
+}
+
+/* SEARCH BAR */
+input {
+  display: block;
+  width: 360px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: 1px solid #d0d6ff;
+  font-size: 15px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.25);
+  border-color: #667eea;
+}
+
+/* Search button */
+input + button {
+  display: block;
+  margin: 12px auto 30px auto;
+  padding: 10px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  box-shadow: 0 10px 25px rgba(24, 90, 157, 0.45);
+  transition: all 0.3s ease;
+}
+
+input + button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(24, 90, 157, 0.6);
+}
+
+
+
+
+/* TABLE */
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+thead {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+th {
+  padding: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Body */
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr {
+  transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+  background: #f4f7ff;
+  transform: scale(1.01);
+}
+
+/* Action buttons */
+td button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Edit */
+td button:first-child {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+/* Delete */
+td button:last-child {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+td button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
