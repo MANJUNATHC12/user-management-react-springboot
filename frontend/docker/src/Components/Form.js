@@ -47,7 +47,7 @@ function Form(){
     const handlesearch = async () => {
         
         if(searchTerm && !age){
-            await axios.get("http://localhost:8008/user/search",{
+            await axios.get("/user/search",{
                 params:{keyword: searchTerm}
             })
             .then(res => setuser(res.data));
@@ -55,7 +55,7 @@ function Form(){
         }
         
         if(!searchTerm && age){
-            await axios.get("http://localhost:8008/user/byage",{
+            await axios.get("/user/byage",{
                 params: {age}
             })
             .then(res => setuser(res.data));
