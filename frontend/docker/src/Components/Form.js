@@ -13,7 +13,7 @@ function Form(){
     const[searchTerm, setsearchTerm] = useState("");
 
     const loaduser = async() => {
-        const res = await axios.get("http://localhost:8008/user");
+        const res = await axios.get("/user");
         setuser(res.data)
     };
 
@@ -27,17 +27,17 @@ function Form(){
     }
 
     const deleteuser = async (id) => {
-        await axios.delete(`http://localhost:8008/user/${id}`);
+        await axios.delete(`/user/${id}`);
         loaduser();
     }
 
     const submit = async () => {
         if(editid){
-            await axios.put(`http://localhost:8008/user/${editid}`, form);
+            await axios.put(`/user/${editid}`, form);
             seteditid(null);
         }
         else {
-            await axios.post("http://localhost:8008/user", form);
+            await axios.post("/user", form);
         }
         setform({name:"", email:"", age:""})
         loaduser();
